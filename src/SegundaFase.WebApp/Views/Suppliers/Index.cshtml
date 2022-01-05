@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Suppliers";
+}
+
+<a asp-action="Index" asp-controller="Supplier" class="btn btn-primary">New Supplier</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Documento</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.List)
+        {
+        <tr>
+            <th scope="row">@item.FullName</th>
+            <td>@item.Document</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
